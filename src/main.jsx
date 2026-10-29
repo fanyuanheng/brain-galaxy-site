@@ -161,14 +161,14 @@ function App() {
     [integrated, setIntegrated] = useState(true),
     [research, setResearch] = useState(1);
   const c = content[lang],
-    ids = ["approach", "technology", "research", "story"];
+    ids = ["approach", "technology", "applications", "research", "story"];
   const r = c.research[research];
   useEffect(() => {
     document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
     document.title =
       lang === "zh"
-        ? "硅基智宇 — 探索智能的下一种可能"
-        : "硅基智宇 — Intelligence, inspired by nature.";
+        ? "硅基智宇 — 做趋近人脑的下一代高能效 AI"
+        : "硅基智宇 — Next-generation, energy-efficient AI";
     document
       .querySelector('meta[name="description"]')
       .setAttribute("content", c.heroText);
@@ -376,6 +376,7 @@ function App() {
             </a>
           ))}
         </div>
+        <p className="proof-note wrap">{c.statNote}</p>
         <section id="approach" className="section approach-section wrap">
           <div className="section-intro">
             <div>
@@ -473,6 +474,36 @@ function App() {
               </article>
             ))}
           </div>
+        </section>
+        <section id="applications" className="section applications-section wrap">
+          <div className="section-intro">
+            <div>
+              <p className="eyebrow">
+                <span className="section-mark" />
+                {c.applicationsLabel}
+              </p>
+              <h2>
+                <Lines text={c.applicationsTitle} />
+              </h2>
+            </div>
+            <p className="section-description">{c.applicationsText}</p>
+          </div>
+          <div className="applications-grid">
+            {c.applications.map((application, i) => (
+              <article className="application" key={application.title}>
+                <span className="application-index" aria-hidden="true">
+                  0{i + 1}
+                </span>
+                <div>
+                  <p className="card-tag">{application.context}</p>
+                  <h3>{application.title}</h3>
+                  <p>{application.text}</p>
+                  <p className="application-focus">{application.focus}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+          <p className="section-note">{c.applicationsNote}</p>
         </section>
         <section id="research" className="section research-section">
           <div className="wrap">
@@ -606,6 +637,37 @@ function App() {
             ))}
           </div>
         </section>
+        <section id="team" className="team-section wrap">
+          <div className="section-intro">
+            <div>
+              <p className="eyebrow">
+                <span className="section-mark" />
+                {c.teamLabel}
+              </p>
+              <h2>
+                <Lines text={c.teamTitle} />
+              </h2>
+            </div>
+            <div className="team-intro-copy">
+              <p className="section-description">{c.teamText}</p>
+              <a
+                className="text-link team-link"
+                href={`mailto:${c.email}?subject=Joining%20the%20team`}
+              >
+                {c.teamCta}
+                <ArrowUpRight size={16} />
+              </a>
+            </div>
+          </div>
+          <div className="team-grid">
+            {c.teamPoints.map(([title, text]) => (
+              <article key={title}>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
         <section id="contact" className="contact-section wrap">
           <div className="contact-glass glass">
             <div className="contact-orbits" aria-hidden="true">
@@ -622,12 +684,12 @@ function App() {
             <p>{c.visionText}</p>
             <a
               className="button button-primary"
-              href="mailto:hello@braingalaxy.ai"
+              href={`mailto:${c.email}`}
             >
               {c.talk}
               <ArrowUpRight size={18} />
             </a>
-            <a className="email-link" href="mailto:hello@braingalaxy.ai">
+            <a className="email-link" href={`mailto:${c.email}`}>
               {c.email}
             </a>
           </div>
@@ -641,7 +703,9 @@ function App() {
           </div>
           <nav aria-label={lang === "en" ? "Footer navigation" : "页脚导航"}>
             <a href="#technology">{c.nav[1]}</a>
-            <a href="#story">{c.nav[3]}</a>
+            <a href="#applications">{c.nav[2]}</a>
+            <a href="#story">{c.nav[4]}</a>
+            <a href="#team">{c.teamLabel}</a>
             <External href="https://github.com/XYXH-Brain/BILA">
               {c.footerResearch}
               <ArrowUpRight size={13} />

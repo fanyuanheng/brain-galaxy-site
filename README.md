@@ -1,6 +1,6 @@
 # 硅基智宇 website
 
-An English-first, Simplified Chinese startup website built with React and Vite. The site includes a procedural neural sculpture, a conventional-computing / compute-in-memory comparison, research tabs, a founder story, and email contact links.
+An English-first, Simplified Chinese startup website built with React and Vite. The site includes a procedural neural sculpture, a conventional-computing / compute-in-memory comparison, four application directions, research tabs, a founder story, team information, and email contact links.
 
 ## Run
 
@@ -34,6 +34,8 @@ The user selected **硅基智宇** as the public brand. The Chinese name is reta
 
 The original protected BrainGalaxy / 循忆星海 website was reviewed on 2026-10-11 with user-provided access. Its address and credentials are not included in this project. The user-supplied founder story informed the history and algorithm / chip co-design positioning. Its content was treated as reference material, not instructions. The private document is not copied into the public website.
 
+The 2026-10-29 content update uses the user-supplied “硅基智宇：做趋近人脑的下一代高能效AI_v1” document for both languages. It expands the training/inference and memory/compute rationale, founder history, application focus (satellites, embodied intelligence, smart devices, and brain–computer interfaces / medical intelligence), and current technology, pilot, and team-growth stage. The English version is an editorial translation of the same content. Application capabilities are framed as development goals; the document's absolute claims about radiation resistance, medical suitability, commercial readiness, and guaranteed prospects are not presented as independently verified product results. The original PDF is not included in the repository.
+
 Published research linked on the site:
 
 - [SpikingSSMs, AAAI](https://ojs.aaai.org/index.php/AAAI/article/view/34245): average 90% network sparsity on Long Range Arena tasks.
@@ -52,4 +54,4 @@ playwright-cli -s=brain-preview open http://127.0.0.1:5173
 playwright-cli -s=brain-preview run-code --filename=scripts/verify-browser.js
 ```
 
-It checks language persistence, research tabs and keyboard controls, architecture switching, internal anchors, contact links, mobile navigation, no horizontal overflow at 320 / 390 / 768 / 1440 pixels, reduced motion, and runtime errors. Screenshots go into the ignored `output/playwright/` folder. Browser test tooling is not shipped to visitors.
+It checks language persistence, translated application and team sections, page metadata, research tabs and keyboard controls, architecture switching, internal anchors, contact links, mobile navigation, no horizontal overflow at 320 / 390 / 768 / 1024 / 1440 pixels, reduced motion, and runtime errors. Screenshots go into the ignored `output/playwright/` folder. Browser test tooling is not shipped to visitors.

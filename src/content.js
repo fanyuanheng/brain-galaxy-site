@@ -1,14 +1,14 @@
 export const content = {
   en: {
-    nav: ["Our approach", "Technology", "Research", "Our story"],
+    nav: ["Our approach", "Technology", "Applications", "Research", "Our story"],
     contact: "Let’s talk",
     menu: "Open menu",
     close: "Close menu",
     skip: "Skip to content",
-    heroTag: "The next nature of intelligence",
+    heroTag: "Next-generation, energy-efficient AI",
     heroLines: ["Intelligence,", "inspired by", "nature."],
     heroText:
-      "Bringing brain-inspired algorithms and compute-in-memory chips together. For AI that does more, with less energy.",
+      "We co-design brain-inspired algorithms and compute-in-memory chips for AI that learns, adapts, and responds at the edge—with less energy.",
     explore: "Explore our technology",
     watch: "See how it works",
     heroCaption: "A new connection between biology and silicon.",
@@ -29,7 +29,7 @@ export const content = {
     approachLabel: "A different way to think",
     approachTitle: "What if computing worked\nmore like a brain?",
     approachText:
-      "In conventional chips, data travels back and forth between memory and the processor. We’re exploring a closer connection: computing where information is stored.",
+      "Our approach addresses two divides: training separated from inference, and memory separated from processing. We co-design learning methods and chip architectures to pursue more adaptive, energy-efficient AI.",
     compare: ["Conventional computing", "Compute-in-memory"],
     memory: "Memory",
     compute: "Processor",
@@ -57,12 +57,12 @@ export const content = {
     techLabel: "One connected technology stack",
     techTitle: "From a single signal\nto a new kind of intelligence.",
     techText:
-      "Software and hardware should evolve together. Our research connects three parts of the same idea.",
+      "Brain-inspired algorithms, compute-in-memory hardware, and joint optimization form one development loop. Memory research supports our longer-term goal of adaptive intelligence.",
     techCards: [
       {
         tag: "Brain-inspired algorithms",
         title: "Compute when it matters.",
-        text: "Spiking neural networks transmit sparse signals, drawing on the event-driven nature of biological neurons.",
+        text: "Spiking neural networks use sparse, event-driven signals. Our research pursues adaptive learning with less dependence on large labeled datasets.",
         link: "Explore spiking models",
       },
       {
@@ -78,6 +78,38 @@ export const content = {
         link: "Explore memory models",
       },
     ],
+    applicationsLabel: "Intelligence where it is needed",
+    applicationsTitle: "Four frontiers.\nOne efficient foundation.",
+    applicationsText:
+      "We focus on applications where low power, low latency, and local processing matter most. Each starts with a real operating constraint.",
+    applications: [
+      {
+        title: "Satellite edge AI",
+        context: "On-board intelligence",
+        text: "Process remote-sensing imagery, recognize targets, and select useful data in orbit to reduce reliance on ground processing and downlink bandwidth.",
+        focus: "Mature-process chip development focused on radiation resilience, heat dissipation, power budgets, and response time.",
+      },
+      {
+        title: "Embodied intelligence",
+        context: "Robotics · Unmanned systems · Industry",
+        text: "Bring fault diagnosis, dynamic vision, path decisions, and situational assessment onto robots and industrial equipment operating in changing environments.",
+        focus: "Co-design adaptive algorithms and local compute for faster response and longer operating time.",
+      },
+      {
+        title: "Smart devices",
+        context: "Wearables · Portable & embedded devices",
+        text: "Enable local speech denoising and recognition, gesture interaction, environmental adaptation, and lightweight perception without depending on a cloud connection.",
+        focus: "Optimize for always-on sensing, personalization, and tight power and compute budgets.",
+      },
+      {
+        title: "Brain–computer interfaces",
+        context: "Neural interfaces · Medical intelligence",
+        text: "Explore neural-signal decoding, lightweight medical-image reconstruction, rehabilitation-device control, and real-time physiological sensing.",
+        focus: "Study how spiking models and low-power hardware can support compact, responsive research devices.",
+      },
+    ],
+    applicationsNote:
+      "Current stage: refining the core technology and developing application pilots across these four focus areas.",
     researchLabel: "Ideas, put to the test",
     researchTitle: "Built on research.\nOpen to possibility.",
     researchText:
@@ -141,26 +173,36 @@ export const content = {
     storyLabel: "Our story",
     storyTitle: "A decade of curiosity.\nA new starting point.",
     storyText:
-      "硅基智宇 began with a question: what becomes possible when we design AI algorithms and chips as one system?",
+      "After more than a decade in brain-inspired computing, Dr. Leng left Huawei to pursue a question: what becomes possible when AI algorithms and chips are designed as one system?",
     storyBody:
-      "After more than a decade in brain-inspired computing, Dr. Leng and the founding team are bringing academic research and chip-development experience together to pursue a more energy-efficient form of intelligence.",
+      "His motivation is the brain’s ability to perceive, learn, and decide efficiently. Conventional chips do not fully exploit brain-inspired algorithms, while general-purpose models are not designed for compute-in-memory hardware. 硅基智宇 brings both sides together from the start.",
     journey: [
       [
         "Foundations in neuroscience",
-        "Research at Heidelberg and Bern, with Karlheinz Meier and Walter Senn.",
+        "Studied with Karlheinz Meier and Walter Senn, and contributed to core research in the European Human Brain Project.",
       ],
       [
         "From research to real systems",
-        "Work on the European Human Brain Project and multiple generations of brain-inspired technology at Huawei’s 2012 Laboratories.",
+        "As a principal engineer at Huawei’s 2012 Laboratories, led major research projects and the development of multiple generations of brain-inspired algorithms and chips.",
       ],
       [
         "A shared vision, in silicon",
-        "Founding 硅基智宇 to co-design brain-inspired algorithms and compute-in-memory chips.",
+        "Founded 硅基智宇 with specialists in brain-inspired algorithms, compute-in-memory chips, and edge deployment, connecting research, chip tape-out, and applications.",
       ],
     ],
+    teamLabel: "Build with us",
+    teamTitle: "A founding mindset.\nA long-term mission.",
+    teamText:
+      "We are refining our core technology, developing application pilots, and growing the team. Bring your expertise in algorithms, chips, or edge systems to the next stage.",
+    teamPoints: [
+      ["Work across the whole system", "Contribute from algorithm iteration and chip adaptation through joint optimization and real-world deployment."],
+      ["Stay close to the work", "A technically grounded team with a flat structure, practical collaboration, and short iteration cycles."],
+      ["Build for the long run", "Learn from more than a decade of academic and industrial experience while tackling a new generation of efficient AI."],
+    ],
+    teamCta: "Talk about joining the team",
     vision: "Intelligence should be more capable.\nAnd less energy-hungry.",
     visionText:
-      "We’re working toward AI that learns, adapts, and makes better use of every unit of energy.",
+      "From application pilots to research collaboration and joining the team, help bring efficient, adaptive intelligence closer to the real world.",
     talk: "Let’s build what comes next",
     email: "hello@braingalaxy.ai",
     footerLine: "Brain-inspired intelligence. Built together.",
@@ -170,15 +212,15 @@ export const content = {
     language: "Switch to Simplified Chinese",
   },
   zh: {
-    nav: ["我们的思路", "核心技术", "研究进展", "创业故事"],
+    nav: ["我们的思路", "核心技术", "应用场景", "研究进展", "创业故事"],
     contact: "联系我们",
     menu: "打开菜单",
     close: "关闭菜单",
     skip: "跳至正文",
-    heroTag: "探索智能的下一种可能",
+    heroTag: "做趋近人脑的下一代高能效 AI",
     heroLines: ["智能的未来，", "从大脑", "获得启发。"],
     heroText:
-      "让类脑算法与存算一体芯片深度协同，以更少的能耗，探索更强的人工智能。",
+      "自研类脑算法与存算一体芯片，软硬件深度协同，让 AI 以更少能耗，在端侧学习、适应与实时响应。",
     explore: "探索核心技术",
     watch: "了解工作原理",
     heroCaption: "在生物智能与硅基计算之间，建立新的连接。",
@@ -198,7 +240,7 @@ export const content = {
     approachLabel: "换一种方式思考",
     approachTitle: "如果计算，\n能更像大脑？",
     approachText:
-      "传统芯片中，数据在存储器与处理器之间往返。我们探索一种更紧密的连接：让计算就在信息存储的地方发生。",
+      "我们从两个底层瓶颈出发：算法的训推分离，以及芯片的存算分离。通过学习范式与芯片架构的协同设计，探索更自主、更高能效的 AI。",
     compare: ["传统计算架构", "存算一体架构"],
     memory: "存储器",
     compute: "处理器",
@@ -222,12 +264,12 @@ export const content = {
     techLabel: "软硬协同的技术体系",
     techTitle: "从一个脉冲信号，\n到新一代智能。",
     techText:
-      "算法与芯片应该共同演进。我们的研究将同一个愿景的三个关键环节连接起来。",
+      "自研类脑算法、存算一体硬件与软硬件协同优化，构成完整的技术闭环。层级记忆研究进一步支撑我们对自主适应智能的长期探索。",
     techCards: [
       {
         tag: "类脑算法",
         title: "只在需要时，传递信号。",
-        text: "脉冲神经网络借鉴生物神经元的事件驱动机制，通过稀疏信号传递信息。",
+        text: "脉冲神经网络借鉴生物神经元的事件驱动机制，通过稀疏信号传递信息，探索降低对海量标注数据依赖的自主学习方法。",
         link: "探索脉冲模型",
       },
       {
@@ -243,6 +285,38 @@ export const content = {
         link: "探索记忆模型",
       },
     ],
+    applicationsLabel: "让智能，在需要的地方发生",
+    applicationsTitle: "四大应用方向，\n一个高能效底座。",
+    applicationsText:
+      "聚焦低功耗、低时延与本地处理需求迫切的场景，从真实工况出发，让前沿技术创造实际价值。",
+    applications: [
+      {
+        title: "卫星端侧 AI",
+        context: "天基智能 · 在轨处理",
+        text: "面向遥感影像解析、目标识别与数据智能筛选，探索在卫星本地完成 AI 处理，减少对地面计算与星地回传带宽的依赖。",
+        focus: "基于成熟制程开展芯片研发，围绕抗辐照、散热、功耗预算与响应时延进行设计。",
+      },
+      {
+        title: "具身智能",
+        context: "机器人 · 无人设备 · 工业感知",
+        text: "面向动态复杂的作业环境，将故障诊断、动态视觉监测、自主路径决策与现场智能研判带到机器人和工业设备端。",
+        focus: "协同优化自适应算法与本地计算，追求更快响应、更长续航与更强的环境适应能力。",
+      },
+      {
+        title: "智能终端",
+        context: "智能穿戴 · 便携终端 · 嵌入式设备",
+        text: "探索在终端本地完成语音降噪识别、体感交互、环境自适应与轻量化感知，降低智能功能对云端连接的依赖。",
+        focus: "围绕全天候感知、个性化适应，以及严格的功耗与算力预算开展软硬协同优化。",
+      },
+      {
+        title: "脑机接口与医疗智能",
+        context: "神经信号 · 医疗与康复设备",
+        text: "探索神经信号解码、医疗影像轻量化重建、康复设备智能调控与人体状态实时感知分析。",
+        focus: "研究脉冲模型与低功耗硬件如何支撑小型化、快速响应的科研设备。",
+      },
+    ],
+    applicationsNote:
+      "当前阶段：围绕以上四大方向，持续推进核心技术定型与场景试点落地。",
     researchLabel: "让想法，经受验证",
     researchTitle: "以研究为基础，\n向可能性出发。",
     researchText:
@@ -306,26 +380,36 @@ export const content = {
     storyLabel: "我们的故事",
     storyTitle: "十余年探索，\n一个新的起点。",
     storyText:
-      "硅基智宇始于一个问题：当 AI 算法与芯片作为一个整体来设计，会带来怎样的可能？",
+      "深耕类脑计算十余年，冷博士选择离开华为，投身创业：当 AI 算法与芯片作为一个整体来设计，会带来怎样的可能？",
     storyBody:
-      "深耕类脑计算十余年，冷博士与创始团队将学术研究和多代芯片研发经验结合，探索更高能效的新一代智能。",
+      "人脑高效感知、学习与决策的能力，是他持续探索的初心。传统芯片难以充分释放类脑算法的潜力，通用大模型也未针对存算一体硬件而设计。硅基智宇从一开始，就让算法与芯片共同演进。",
     journey: [
       [
         "从神经科学出发",
-        "在海德堡大学与伯尔尼大学，师从 Karlheinz Meier 与 Walter Senn，探索类脑计算。",
+        "先后师从 Karlheinz Meier 与 Walter Senn，参与欧盟人类大脑计划核心研发，探索类脑计算的底层机制。",
       ],
       [
         "从学术研究，到真实系统",
-        "参与欧盟人类大脑计划，在华为 2012 实验室推动多代类脑技术研发与迭代。",
+        "在华为 2012 实验室担任主任工程师，牵头重大科研项目，带队推动多代类脑算法与芯片的研发和产业迭代。",
       ],
       [
         "让共同愿景，落在硅上",
-        "创立硅基智宇，推动类脑算法与存算一体芯片的软硬件协同设计。",
+        "集结类脑算法、存算一体芯片与端侧落地的核心骨干，创立硅基智宇，贯通学术研究、芯片流片与场景应用。",
       ],
     ],
+    teamLabel: "与我们一起构建",
+    teamTitle: "以创业者的心态，\n做长期有价值的事。",
+    teamText:
+      "我们正处于核心技术定型、场景试点落地与团队扩张阶段。期待算法、芯片与端侧系统领域的伙伴，一起推动下一阶段的探索。",
+    teamPoints: [
+      ["参与全链路实战", "从算法迭代、芯片适配，到软硬件协同优化与真实场景落地，积累跨领域能力。"],
+      ["专注技术与价值", "扎实的技术底色、扁平化的组织方式，以务实协作和快速迭代解决真实问题。"],
+      ["投入长期的探索", "依托十余年的学术与产业经验，持续攻坚下一代高能效 AI，保持可持续的奋斗节奏。"],
+    ],
+    teamCta: "聊聊加入团队",
     vision: "让智能更强大，\n也让能量更有价值。",
     visionText:
-      "我们致力于探索能够学习、适应，并更高效利用每一份能量的人工智能。",
+      "无论是场景试点、技术合作，还是加入团队，与我们一起让高效、自适应的智能走向真实世界。",
     talk: "一起构建下一个可能",
     email: "hello@braingalaxy.ai",
     footerLine: "类脑智能，软硬协同。",

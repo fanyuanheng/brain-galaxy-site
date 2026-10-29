@@ -104,8 +104,21 @@ async (page) => {
     (await page
       .getByRole("link", { name: "hello@braingalaxy.ai", exact: true })
       .getAttribute("href")) === "mailto:hello@braingalaxy.ai",
-    "Contact opens the supplied email address",
+    "Contact opens the configured placeholder email address",
   );
+  await page.locator(".desktop-nav").getByRole("link", { name: "Applications", exact: true }).click();
+  check(
+    (await page.locator("#applications article").count()) === 4 &&
+      await page.getByRole("heading", { name: "Satellite edge AI", exact: true }).isVisible(),
+    "Applications navigation reaches the four focus areas",
+  );
+  await page.locator("#applications").screenshot({ path: "output/playwright/desktop-applications.png" });
+  check(
+    (await page.getByRole("link", { name: "Talk about joining the team", exact: true }).getAttribute("href")) ===
+      "mailto:hello@braingalaxy.ai?subject=Joining%20the%20team",
+    "Team invitation opens a dedicated email subject",
+  );
+  await page.locator("#team").screenshot({ path: "output/playwright/desktop-team.png" });
   const missingAnchors = await page
     .locator('a[href^="#"]')
     .evaluateAll((links) =>
@@ -121,7 +134,7 @@ async (page) => {
     path: "output/playwright/desktop-full.png",
     fullPage: true,
   });
-  for (const width of [320, 390, 768, 1440]) {
+  for (const width of [320, 390, 768, 1024, 1440]) {
     await page.setViewportSize({ width, height: 900 });
     check(
       await page.evaluate(
@@ -172,7 +185,18 @@ async (page) => {
     (await page.locator("html").getAttribute("lang")) === "zh-CN",
     "Language preference survives reload",
   );
-  for (const width of [320, 390, 768, 1440]) {
+  check(
+    await page.getByRole("heading", { name: "卫星端侧 AI", exact: true }).isVisible() &&
+      await page.getByRole("heading", { name: "脑机接口与医疗智能", exact: true }).isVisible() &&
+      await page.getByRole("link", { name: "聊聊加入团队", exact: true }).isVisible(),
+    "Applications and team invitation are translated into Chinese",
+  );
+  check(
+    (await page.title()).includes("下一代高能效 AI") &&
+      (await page.locator('meta[name="description"]').getAttribute("content")).includes("端侧"),
+    "Chinese page metadata matches the updated positioning",
+  );
+  for (const width of [320, 390, 768, 1024, 1440]) {
     await page.setViewportSize({ width, height: 900 });
     check(
       await page.evaluate(
@@ -181,7 +205,11 @@ async (page) => {
       `No horizontal overflow in Chinese at ${width}px`,
     );
   }
+  await page.locator("#applications").screenshot({ path: "output/playwright/desktop-chinese-applications.png" });
   await page.setViewportSize({ width: 390, height: 844 });
+  await page.locator("#applications").screenshot({ path: "output/playwright/mobile-chinese-applications.png" });
+  await page.locator("#team").screenshot({ path: "output/playwright/mobile-chinese-team.png" });
+  await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
   await page.getByRole("button", { name: "打开菜单", exact: true }).click();
   await page.screenshot({ path: "output/playwright/mobile-chinese-menu.png" });
   await page.keyboard.press("Escape");
@@ -217,4 +245,4 @@ async (page) => {
   await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
   check(errors.length === 0, `No runtime errors: ${errors.join("; ")}`);
   return { passed: results.length, results };
-};
+}
